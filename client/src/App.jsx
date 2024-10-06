@@ -4,6 +4,7 @@ import './App.css';
 
 // Component Imports
 import Nav from './components/Nav';
+import Footer from './components/Footer';
 
 // Page Imports
 import Home from './pages/Home';
@@ -20,6 +21,7 @@ function App() {
           <Route path='/shop' element={<Shop />} />
         </Routes>
       </Router>
+      <Footer />
     </>
   )
 }
