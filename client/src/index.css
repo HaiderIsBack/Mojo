@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --bg-main: #FEFEFE;
+    --primary-accent: #007BC4;
+    --text-main: #010101;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 25px;
+}
+
+html, body{
+    font-family: "Josefin Sans", sans-serif;
+    background-color: var(--bg-main);
+}
