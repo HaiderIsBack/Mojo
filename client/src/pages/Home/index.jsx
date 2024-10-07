@@ -135,7 +135,7 @@ const Home = () => {
                 </nav>
 
                 <div className="hero-img-container relative w-full h-[550px] p-0 lg:p-10">
-                    <img src="http://localhost:8080/hero-img1.webp" alt="Hero 1" className='w-full h-full object-cover' />
+                    <img src="https://mojo-backend.vercel.app/hero-img1.webp" alt="Hero 1" className='w-full h-full object-cover' />
                     <h5 className='absolute top-20 left-5 sm:left-10 lg:left-20 text-blue-700 text-md sm:text-lg lg:text-2xl font-semibold'>Apple Innovation</h5>
                     <h3 className='absolute top-32 left-5 sm:left-10 lg:left-20 text-white text-3xl sm:text-4xl lg:text-5xl font-bold'>HIGHER<br/> LEVEL<br/> SMARTPHONE</h3>
                     <p className='absolute top-64 sm:top-72 left-5 sm:left-10 lg:left-20 text-gray-200 text-sm sm:text-md'>Lorem ipsum dolor sit amet, consectetur<br/> adipisicing elit. Deleniti, fugiat!</p>
