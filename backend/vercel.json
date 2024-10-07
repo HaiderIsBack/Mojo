@@ -8,8 +8,8 @@
     ],
     "routes": [
       {
-        "src": "/compressed/(.*)", 
-        "dest": "/public/compressed/$1"
+        "src": "/compressed/(.*)",
+        "dest": "server.js"
       },
       {
         "src": "/(.*)",
