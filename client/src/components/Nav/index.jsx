@@ -36,7 +36,7 @@ const Nav = () => {
                     <Menu />
                 </div>
                 <div className="brand-title col-span-2 lg:col-span-1">
-                    <h1 className='font-bold text-5xl leading-none text-center mt-2 cursor-default'>MOJO</h1>
+                    <h1 className='font-bold text-3xl sm:text-5xl leading-none text-center mt-2 cursor-default'>MOJO</h1>
                 </div>
                 <div className="search-bar col-span-2 hidden lg:grid grid-cols-3 gap-2 px-5 rounded-3xl border-2 border-gray-900 align-middle">
                     <input type="text" name="" id="" placeholder='Search Products' className='outline-none col-span-2 py-2' />
@@ -124,7 +124,7 @@ const FixedNavbar = () => {
                 </div>
                 <div className="col-span-6 lg:col-span-3">
                     <div className="brand-title">
-                        <h1 className='font-bold text-4xl leading-none text-center mt-2 cursor-default'>MOJO</h1>
+                        <h1 className='font-bold text-3xl sm:text-4xl leading-none text-center mt-2 cursor-default'>MOJO</h1>
                     </div>
                 </div>
                 <div className="hidden lg:block col-span-6">

@@ -80,8 +80,8 @@ const ProductCard = ({product, index}) => {
                 <center>
                     <img src={product.imageUrl} alt="" className='w-24 h-24 sm:w-32 sm:h-32 lg:w-52 lg:h-52 object-contain drop-shadow-2xl hover:scale-110 cursor-pointer duration-150' loading='lazy' />
                 </center>
-                <h4 className='pt-5 border-t-2 border-gray-200 text-xs lg:text-lg'>{product.name}</h4>
-                <p className='text-gray-400 text-xs lg:text-md'>{product.category}</p>
+                <h4 className='pt-5 border-t-2 border-gray-200 text-xs lg:text-lg w-full overflow-hidden block whitespace-nowrap text-ellipsis'>{product.name}</h4>
+                <p className='text-gray-400 text-xs lg:text-md w-full overflow-hidden block whitespace-nowrap text-ellipsis'>{product.category}</p>
                 <h4 className='text-blue-600 text-xs lg:text-md'>${product.price}</h4>
                 <div className="details-section group cursor-pointer text-xs lg:text-md">
                     <p>Details <KeyboardArrowDown style={{fontSize: "17px"}} className='rotate-[-90deg] group-hover:rotate-0' /></p>
@@ -97,8 +97,8 @@ const ProductCard = ({product, index}) => {
                     </div>
                 </div>
                 <div className="grid grid-cols-2 gap-1">
-                    <button className='w-full bg-transparent hover:bg-blue-600 hover:text-white duration-200 border-[1px] border-blue-600 text-blue-600 text-xs lg:text-md mt-2 py-3'>Add to Cart</button>
-                    <button className='w-full bg-blue-600 hover:bg-blue-700 text-xs lg:text-md text-white mt-2 py-3'>Buy Now</button>
+                    <button className='w-full col-span-2 sm:col-span-1 bg-transparent hover:bg-blue-600 hover:text-white duration-200 border-[1px] border-blue-600 text-blue-600 text-xs lg:text-md mt-2 py-3'>Add to Cart</button>
+                    <button className='w-full hidden sm:block bg-blue-600 hover:bg-blue-700 text-xs lg:text-md text-white mt-2 py-3'>Buy Now</button>
                 </div>
                 <div className="absolute top-1 right-1 flex flex-col gap-2 opacity-0 group-hover/outer:opacity-100 duration-300">
                     <div className="p-2 bg-white text-black border-[1px] border-gray-300 rounded-lg cursor-pointer">

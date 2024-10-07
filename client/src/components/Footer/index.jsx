@@ -75,10 +75,10 @@ const LowerFooter = () => {
                 <p className='text-sm place-content-center'>MOJO © {new Date().getFullYear()} By Atomic Solutions</p>
                 <p className='text-sm text-center place-content-center hidden lg:block'>Syed Zulqarnain Haider</p>
                 <ul className='flex justify-end items-center gap-3'>
-                    <li><img src="/visa-icon.png" alt="" className='w-[30px]' /></li>
-                    <li><img src="/mastercard-icon.png" alt="" className='w-[30px]' /></li>
-                    <li><img src="/easypaisa-icon.png" alt="" className='w-[30px]' /></li>
-                    <li><img src="/jazzcash-icon.png" alt="" className='w-[30px]' /></li>
+                    <li><img src="/visa-icon.png" alt="" className='w-[30px]' loading='lazy' /></li>
+                    <li><img src="/mastercard-icon.png" alt="" className='w-[30px]' loading='lazy' /></li>
+                    <li><img src="/easypaisa-icon.png" alt="" className='w-[30px]' loading='lazy' /></li>
+                    <li><img src="/jazzcash-icon.png" alt="" className='w-[30px]' loading='lazy' /></li>
                 </ul>
             </div>
         </div>
