@@ -7,7 +7,7 @@ const PORT = 8080;
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static('public/compressed'));
+app.use('/compressed' ,express.static('public/compressed'));
 
 app.get("/", (req, res) => {
     res.send('Access not allowed!');
