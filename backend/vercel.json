@@ -9,7 +9,7 @@
     "routes": [
       {
         "src": "/compressed/(.*)",
-        "dest": "/$1"
+        "dest": "/public/compressed/$1"
       },
       {
         "src": "/(.*)",
