@@ -183,7 +183,7 @@ const Home = () => {
                                 <p className='text-gray-700 hidden lg:block text-sm mb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, quia?</p>
                                 <button className='text-white text-sm bg-blue-700 hover:bg-blue-800 duration-200 py-2 px-5 rounded-3xl mt-10'>SHOW MORE</button>
                             </div>
-                            <img src="/Xbox-one-s.png" alt="Xbox One S" className='drop-shadow-2xl' />
+                            <img src="https://mojo-backend.vercel.app/compressed/Xbox-one-s.webp" alt="Xbox One S" className='drop-shadow-2xl' />
                         </div>
                     </div>
                 </SwiperSlide>
@@ -197,7 +197,7 @@ const Home = () => {
                                 <p className='text-gray-300 hidden lg:block text-sm mb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, quia?</p>
                                 <button className='text-black text-sm bg-white hover:bg-gray-200 duration-200 py-2 px-5 rounded-3xl mt-10'>SHOW MORE</button>
                             </div>
-                            <img src="/samsung-phone.png" alt="Xbox One S" className='drop-shadow-2xl' />
+                            <img src="https://mojo-backend.vercel.app/compressed/samsung-phone.webp" alt="Xbox One S" className='drop-shadow-2xl' />
                         </div>
                     </div>
                 </SwiperSlide>
