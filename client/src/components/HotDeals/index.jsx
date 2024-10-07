@@ -52,8 +52,8 @@ const HotDeals = () => {
             </center>
             <div className="w-full hidden lg:grid grid-cols-12 gap-5 border-t-2 border-gray-300 py-10">
                 <div className="col-span-12 lg:col-span-4 px-5 lg:px-0 text-center">
-                    <div className="w-full h-[300px] lg:h-[400px] bg-white border-[1px] border-gray-300 rounded-lg relative overflow-hidden group">
-                        <img src="/Xbox-one-s.png" alt="" className='w-full h-full scale-75 group-hover:scale-110 duration-300 cursor-pointer object-cover drop-shadow-lg' />
+                    <div className="w-full h-[200px] lg:h-[400px] bg-white border-[1px] border-gray-300 rounded-lg relative overflow-hidden group">
+                        <img src="/Xbox-one-s.png" alt="" className='w-full h-full scale-100 group-hover:scale-110 duration-300 cursor-pointer object-cover drop-shadow-lg' />
                         <button className='absolute bottom-[-25%] left-0 w-full bg-blue-600 text-white py-3 opacity-0 group-hover:opacity-100 group-hover:bottom-0 duration-300'>Add to Cart</button>
 
                         <div className="absolute top-1 right-1 flex flex-col gap-2 opacity-0 group-hover:opacity-100 duration-300 z-10">
