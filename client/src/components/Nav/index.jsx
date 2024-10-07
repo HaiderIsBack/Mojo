@@ -136,7 +136,7 @@ const FixedNavbar = () => {
                     </nav>
                 </div>
                 <div className="col-span-3">
-                    <div className="flex items-center h-full gap-2 pl-5">
+                    <div className="flex items-center h-full gap-2 pl-0 sm:pl-5">
                         <a href="#" className='hidden lg:block hover:text-blue-700'>Login / Register</a>
                         <div className="flex gap-3">
                             <a href="#" className='hidden lg:block hover:text-blue-700'><FavoriteBorderOutlined /></a>

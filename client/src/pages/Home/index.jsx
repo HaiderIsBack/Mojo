@@ -289,7 +289,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-span-12 lg:col-span-9">
+                <div className="col-span-12 lg:col-span-9 px-7 lg:px-0">
                     <LimitedProducts productColumns={3} maxProducts={6} />
                 </div>
             </div>
