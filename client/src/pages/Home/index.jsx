@@ -146,7 +146,7 @@ const Home = () => {
 
         <div className="hero-container container mx-auto hidden lg:grid grid-cols-12 gap-5">
             <div className="col-span-6 bg-gray-200 relative overflow-hidden">
-                <img src="/Xbox-one-s.png" alt="Xbox One S" className='absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] opacity-10 z-0' />
+                <img src="https://mojo-backend.vercel.app/compressed/Xbox-one-s.webp" alt="Xbox One S" className='absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] opacity-10 z-0' />
                 <div className="w-full grid grid-cols-2 gap-1 p-5 relative z-10">
                     <div>
                         <h6 className='text-blue-600 my-3'>NEW TECHNOLOGIES</h6>
@@ -154,11 +154,11 @@ const Home = () => {
                         <p className='text-gray-700 text-sm mb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, quia?</p>
                         <button className='text-white text-sm bg-blue-700 hover:bg-blue-800 duration-200 py-3 px-6 rounded-3xl'>SHOW MORE</button>
                     </div>
-                    <img src="/Xbox-one-s.png" alt="Xbox One S" className='drop-shadow-2xl' />
+                    <img src="https://mojo-backend.vercel.app/compressed/Xbox-one-s.webp" alt="Xbox One S" className='drop-shadow-2xl' />
                 </div>
             </div>
             <div className="col-span-6 bg-blue-700 relative z-10">
-                <img src="/samsung-phone.png" alt="Samsung Ultra" className='absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] opacity-10 z-0' />
+                <img src="https://mojo-backend.vercel.app/compressed/samsung-phone.webp" alt="Samsung Ultra" className='absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] opacity-10 z-0' />
                 <div className="w-full grid grid-cols-2 gap-1 p-5 relative z-10">
                     <div>
                         <h6 className='text-blue-300 my-3'>SAMSUNG ACCESSORIES</h6>
@@ -166,7 +166,7 @@ const Home = () => {
                         <p className='text-gray-300 text-sm mb-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, quia?</p>
                         <button className='text-black text-sm bg-white hover:bg-gray-200 duration-200 py-3 px-6 rounded-3xl'>SHOW MORE</button>
                     </div>
-                    <img src="/samsung-phone.png" alt="Xbox One S" className='drop-shadow-2xl' />
+                    <img src="https://mojo-backend.vercel.app/compressed/samsung-phone.webp" alt="Samsung" className='drop-shadow-2xl' />
                 </div>
             </div>
         </div>
@@ -175,7 +175,7 @@ const Home = () => {
             <Swiper slidesPerView={1} spaceBetween={50} loop={true}>
                 <SwiperSlide>
                     <div className="h-64 sm:h-72 bg-gray-200 relative overflow-hidden">
-                        <img src="/Xbox-one-s.png" alt="Xbox One S" className='absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] opacity-10 w-full h-full object-cover z-0' />
+                        <img src="https://mojo-backend.vercel.app/compressed/Xbox-one-s.webp" alt="Xbox One S" className='absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] opacity-10 w-full h-full object-cover z-0' />
                         <div className="w-full grid grid-cols-2 gap-0 p-5 relative z-10">
                             <div>
                                 <h6 className='text-blue-600 text-xs sm:text-md my-3'>NEW TECHNOLOGIES</h6>
@@ -189,7 +189,7 @@ const Home = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="h-64 sm:h-72 bg-blue-700 relative z-10">
-                        <img src="/samsung-phone.png" alt="Samsung Ultra" className='absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] opacity-10 z-0' />
+                        <img src="https://mojo-backend.vercel.app/compressed/samsung-phone.webp" alt="Samsung Ultra" className='absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] opacity-10 z-0' />
                         <div className="w-full grid grid-cols-2 gap-1 p-5 relative z-10">
                             <div>
                                 <h6 className='text-blue-300 text-xs sm:text-md my-3'>SAMSUNG ACCESSORIES</h6>
@@ -220,7 +220,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="col-span-12 lg:col-span-6 relative">
-                    <img src="/ps5-controller.png" alt="" className='absolute' />
+                    <img src="https://mojo-backend.vercel.app/compressed/ps5-controller.webp" alt="" className='absolute' />
                 </div>
             </div>
         </div>
@@ -244,7 +244,7 @@ const Home = () => {
                             <div className="border-y-[1px] border-gray-300">
                                 <div className="grid grid-cols-12 py-5 gap-3">
                                     <div className="col-span-3">
-                                        <img src="/samsung-phone.png" alt="" />
+                                        <img src="https://mojo-backend.vercel.app/compressed/samsung-phone.webp" alt="" />
                                     </div>
                                     <div className="col-span-9 flex flex-col">
                                         <h6>Samsung Galaxy S24</h6>
@@ -255,7 +255,7 @@ const Home = () => {
                             <div className="border-y-[1px] border-gray-300">
                                 <div className="grid grid-cols-12 py-5 gap-3">
                                     <div className="col-span-3">
-                                        <img src="/nike-shoes.png" alt="" />
+                                        <img src="https://mojo-backend.vercel.app/compressed/nike-shoes.webp" alt="" />
                                     </div>
                                     <div className="col-span-9 flex flex-col">
                                         <h6>Nike Shoes Adult Size</h6>
@@ -266,7 +266,7 @@ const Home = () => {
                             <div className="border-y-[1px] border-gray-300">
                                 <div className="grid grid-cols-12 py-5 gap-3">
                                     <div className="col-span-3">
-                                        <img src="/nintendo-switch.png" alt="" />
+                                        <img src="https://mojo-backend.vercel.app/compressed/nintendo-switch.webp" alt="" />
                                     </div>
                                     <div className="col-span-9 flex flex-col">
                                         <h6>Nintendo Switch</h6>
@@ -277,7 +277,7 @@ const Home = () => {
                             <div className="border-y-[1px] border-gray-300">
                                 <div className="grid grid-cols-12 py-5 gap-3">
                                     <div className="col-span-3">
-                                        <img src="/ps5-controller-front.png" alt="" />
+                                        <img src="https://mojo-backend.vercel.app/compressed/ps5-controller-front.webp" alt="" />
                                     </div>
                                     <div className="col-span-9 flex flex-col">
                                         <h6>PS5 Controller</h6>

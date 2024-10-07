@@ -17,14 +17,14 @@ const Footer = () => {
                 <div className="col-span-12 sm:col-span-6 lg:col-span-3">
                     <h4 className='font-bold uppercase mb-5'>Recent Posts</h4>
                     <div className="grid grid-cols-3 border-b-[1px] border-gray-700 py-5 pt-0">
-                        <img src="/samsung-camera-post.jpg" alt="" className='w-[75px] h-[75px] object-cover' />
+                        <img src="https://mojo-backend.vercel.app/compressed/samsung-camera-post.webp" alt="" className='w-[75px] h-[75px] object-cover' />
                         <div className="col-span-2">
                             <h6>Gadgets for capturing moments of life</h6>
                             <p className='text-sm text-gray-400'>August 12, 2022</p>
                         </div>
                     </div>
                     <div className="grid grid-cols-3 py-5">
-                        <img src="/braun-watch-post.jpg" alt="" className='w-[75px] h-[75px] object-cover' />
+                        <img src="https://mojo-backend.vercel.app/compressed/braun-watch-post.webp" alt="" className='w-[75px] h-[75px] object-cover' />
                         <div className="col-span-2">
                             <h6>Watches for Men timeless treasure</h6>
                             <p className='text-sm text-gray-400'>July 16, 2024</p>
@@ -75,10 +75,10 @@ const LowerFooter = () => {
                 <p className='text-sm place-content-center'>MOJO © {new Date().getFullYear()} By Atomic Solutions</p>
                 <p className='text-sm text-center place-content-center hidden lg:block'>Syed Zulqarnain Haider</p>
                 <ul className='flex justify-end items-center gap-3'>
-                    <li><img src="/visa-icon.png" alt="" className='w-[30px]' loading='lazy' /></li>
-                    <li><img src="/mastercard-icon.png" alt="" className='w-[30px]' loading='lazy' /></li>
-                    <li><img src="/easypaisa-icon.png" alt="" className='w-[30px]' loading='lazy' /></li>
-                    <li><img src="/jazzcash-icon.png" alt="" className='w-[30px]' loading='lazy' /></li>
+                    <li><img src="https://mojo-backend.vercel.app/compressed/visa-icon.webp" alt="" className='w-[30px]' loading='lazy' /></li>
+                    <li><img src="https://mojo-backend.vercel.app/compressed/mastercard-icon.webp" alt="" className='w-[30px]' loading='lazy' /></li>
+                    <li><img src="https://mojo-backend.vercel.app/compressed/easypaisa-icon.webp" alt="" className='w-[30px]' loading='lazy' /></li>
+                    <li><img src="https://mojo-backend.vercel.app/compressed/jazzcash-icon.webp" alt="" className='w-[30px]' loading='lazy' /></li>
                 </ul>
             </div>
         </div>
