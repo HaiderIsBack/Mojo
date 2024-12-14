@@ -7,6 +7,7 @@ import { KeyboardArrowLeft, KeyboardArrowRight, FavoriteOutlined, Shuffle, Favor
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Link } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,7 +79,9 @@ const ProductCard = ({product, index}) => {
         <div className="product-wrapper group/outer" ref={productRef}>
             <div className="product border-[1px] border-gray-400 rounded-lg shadow-lg hover:translate-y-[-20px] duration-200 p-2 relative">
                 <center>
-                    <img src={product.imageUrl} alt="" className='w-24 h-24 sm:w-32 sm:h-32 lg:w-52 lg:h-52 object-contain drop-shadow-2xl hover:scale-110 cursor-pointer duration-150' loading='lazy' />
+                    <Link to={"/product/" + product.id}>
+                        <img src={product.imageUrl} alt="" className='w-24 h-24 sm:w-32 sm:h-32 lg:w-52 lg:h-52 object-contain drop-shadow-2xl hover:scale-110 cursor-pointer duration-150' loading='lazy' />
+                    </Link>
                 </center>
                 <h4 className='pt-5 border-t-2 border-gray-200 text-xs lg:text-lg w-full overflow-hidden block whitespace-nowrap text-ellipsis'>{product.name}</h4>
                 <p className='text-gray-400 text-xs lg:text-md w-full overflow-hidden block whitespace-nowrap text-ellipsis'>{product.category}</p>

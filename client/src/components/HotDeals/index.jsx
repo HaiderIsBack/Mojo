@@ -4,47 +4,9 @@ import './index.css';
 import { Shuffle, FavoriteBorderOutlined } from '@mui/icons-material';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Link } from 'react-router-dom';
 
 const HotDeals = () => {
-
-    useEffect(() => {
-        const imgBoxes = document.querySelectorAll(".special-img-box");
-
-        imgBoxes.forEach((imgBox) => {
-            imgBox.addEventListener("mousemove", (event) => {
-                const img = imgBox.getElementsByTagName("img")[0];
-                const rect = imgBox.getBoundingClientRect();
-                const x = (event.clientX - rect.left) / rect.width * 100;
-                const y = (event.clientY - rect.top) / rect.height * 100;
-                
-                img.style.transformOrigin = `${x}% ${y}%`; // Changes the zoom origin based on mouse position
-                img.style.transform = "scale(1.5)"; // Maintains the zoom effect
-            });
-            imgBox.addEventListener('mouseleave', () => {
-                const img = imgBox.getElementsByTagName("img")[0];
-                img.style.transformOrigin = "center"; // Resets the origin to center
-                img.style.transform = "scale(1)"; // Resets the zoom
-            });
-        });
-
-        return () => {
-            imgBoxes.forEach((imgBox) => {
-                imgBox.removeEventListener("mousemove", (event) => {
-                    const rect = imgBox.getBoundingClientRect();
-                    const x = (event.clientX - rect.left) / rect.width * 100;
-                    const y = (event.clientY - rect.top) / rect.height * 100;
-                    
-                    img.style.transformOrigin = `${x}% ${y}%`; // Changes the zoom origin based on mouse position
-                    img.style.transform = "scale(1.5)"; // Maintains the zoom effect
-                });
-                imgBox.removeEventListener('mouseleave', () => {
-                    img.style.transformOrigin = "center"; // Resets the origin to center
-                    img.style.transform = "scale(1)"; // Resets the zoom
-                });
-            });
-        }
-    }, []);
-
     return (
         <div className="hotdeals container mx-auto w-full py-20">
             <center>
@@ -53,7 +15,9 @@ const HotDeals = () => {
             <div className="w-full hidden lg:grid grid-cols-12 gap-5 border-t-2 border-gray-300 py-10">
                 <div className="col-span-12 lg:col-span-4 px-5 lg:px-0 text-center">
                     <div className="w-full h-[200px] lg:h-[400px] bg-white border-[1px] border-gray-300 rounded-lg relative overflow-hidden group">
-                        <img src="https://mojo-backend.vercel.app/compressed/Xbox-one-s.webp" alt="" className='w-full h-full scale-100 group-hover:scale-110 duration-300 cursor-pointer object-cover drop-shadow-lg' />
+                        <Link to="/product/1/">
+                            <img src="https://mojo-backend.vercel.app/compressed/Xbox-one-s.webp" alt="" className='w-full h-full scale-100 group-hover:scale-110 duration-300 cursor-pointer object-cover drop-shadow-lg' />
+                        </Link>
                         <button className='absolute bottom-[-25%] left-0 w-full bg-blue-600 text-white py-3 opacity-0 group-hover:opacity-100 group-hover:bottom-0 duration-300'>Add to Cart</button>
 
                         <div className="absolute top-1 right-1 flex flex-col gap-2 opacity-0 group-hover:opacity-100 duration-300 z-10">
@@ -74,7 +38,9 @@ const HotDeals = () => {
                 </div>
                 <div className="col-span-12 lg:col-span-4 px-5 lg:px-0 text-center">
                     <div className="w-full h-[200px] lg:h-[400px] bg-white border-[1px] border-gray-300 rounded-lg relative overflow-hidden group">
-                        <img src="https://mojo-backend.vercel.app/compressed/spiderman-mask.webp" alt="" className='w-full h-full scale-100 group-hover:scale-110 duration-300 cursor-pointer object-cover drop-shadow-lg' />
+                        <Link to="/product/3/">
+                            <img src="https://mojo-backend.vercel.app/compressed/spiderman-mask.webp" alt="" className='w-full h-full scale-100 group-hover:scale-110 duration-300 cursor-pointer object-cover drop-shadow-lg' />
+                        </Link>
                         <button className='absolute bottom-[-25%] left-0 w-full bg-blue-600 text-white py-3 opacity-0 group-hover:opacity-100 group-hover:bottom-0 duration-300'>Add to Cart</button>
 
                         <div className="absolute top-1 right-1 flex flex-col gap-2 opacity-0 group-hover:opacity-100 duration-300 z-10">
@@ -95,7 +61,9 @@ const HotDeals = () => {
                 </div>
                 <div className="col-span-12 lg:col-span-4 px-5 lg:px-0 text-center">
                     <div className="w-full h-[200px] lg:h-[400px] bg-white border-[1px] border-gray-300 rounded-lg relative overflow-hidden group">
-                        <img src="https://mojo-backend.vercel.app/compressed/ps5-controller-front.webp" alt="" className='w-full h-full scale-100 group-hover:scale-110 duration-300 cursor-pointer object-cover drop-shadow-lg' />
+                        <Link to="/product/9">
+                            <img src="https://mojo-backend.vercel.app/compressed/ps5-controller-front.webp" alt="" className='w-full h-full scale-100 group-hover:scale-110 duration-300 cursor-pointer object-cover drop-shadow-lg' />
+                        </Link>
                         <button className='absolute bottom-[-25%] left-0 w-full bg-blue-600 text-white py-3 opacity-0 group-hover:opacity-100 group-hover:bottom-0 duration-300'>Add to Cart</button>
 
                         <div className="absolute top-1 right-1 flex flex-col gap-2 opacity-0 group-hover:opacity-100 duration-300 z-10">

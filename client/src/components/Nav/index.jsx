@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import './index.css';
 
+import { Link } from 'react-router-dom';
+
 // Icon Imports
 import { 
     KeyboardArrowDownSharp,
@@ -36,7 +38,9 @@ const Nav = () => {
                     <Menu />
                 </div>
                 <div className="brand-title col-span-2 lg:col-span-1">
-                    <h1 className='font-bold text-3xl sm:text-5xl leading-none text-center mt-2 cursor-default'>MOJO</h1>
+                    <Link to={"/"}>
+                        <h1 className='font-bold text-3xl sm:text-5xl leading-none text-center mt-2 cursor-pointer'>MOJO</h1>
+                    </Link>
                 </div>
                 <div className="search-bar col-span-2 hidden lg:grid grid-cols-3 gap-2 px-5 rounded-3xl border-2 border-gray-900 align-middle">
                     <input type="text" name="" id="" placeholder='Search Products' className='outline-none col-span-2 py-2' />

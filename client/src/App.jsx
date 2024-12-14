@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 
 // Component Imports
@@ -8,22 +8,35 @@ import Footer from './components/Footer';
 
 // Page Imports
 import Home from './pages/Home';
+import ProductPage from './pages/ProductPage';
 import Shop from './pages/Shop';
 
 function App() {
 
   return (
     <>
-      <Nav />
       <Router>
+        <Caliborator />
+        <Nav />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/shop' element={<Shop />} />
+          <Route path='/product/'>
+            <Route path=':productId' element={<ProductPage />} />
+          </Route>
         </Routes>
       </Router>
       <Footer />
     </>
   )
+}
+
+const Caliborator = () => {
+  const location = useLocation();
+
+  useEffect(()=>{
+    window.scrollTo(0, 0)
+  }, [location.pathname])
 }
 
 export default App
