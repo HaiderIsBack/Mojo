@@ -91,7 +91,7 @@ const ProductCard = ({product, index}) => {
                     <div className="details w-full invisible max-h-0 overflow-hidden group-hover:max-h-52 group-hover:visible transition-all duration-300 delay-300">
                         {
                             product.details ? product.details.map((detail, i) => {
-                                return <div className="w-full flex justify-between items-center border-dashed border-t-[1px] border-gray-500 p-1">
+                                return <div key={`${detail}-${i}`} className="w-full flex justify-between items-center border-dashed border-t-[1px] border-gray-500 p-1">
                                     <h6 className='text-black'>{detail.name}</h6>
                                     <h6 className='text-gray-400'>{detail.description}</h6>
                                 </div>

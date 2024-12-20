@@ -30,6 +30,23 @@ const Nav = () => {
             }
         }
     }, []);
+
+    const openCart = () => {
+        console.log("Hello")
+        const cartSidebar = document.querySelector(".cart");
+        const overlay = document.querySelector(".overlay");
+
+        cartSidebar.classList.add("open");
+        overlay.classList.add("open");
+    }
+
+    const openSidebarMenu = () => {
+        const menuSidebar = document.querySelector(".menu-sidebar");
+        const overlay = document.querySelector(".overlay");
+
+        menuSidebar.classList.add("open");
+        overlay.classList.add("open");
+    }
     return (
         <>
             <TopHeader />
@@ -61,7 +78,7 @@ const Nav = () => {
                     <div className="flex justify-end gap-3">
                         <a href="#" className='hidden lg:block hover:text-blue-700'><FavoriteBorderOutlined /></a>
                         <a href="#" className='hidden lg:block hover:text-blue-700'><Shuffle /><sup className='bg-blue-600 text-white rounded-full' style={{padding: "0.1rem 0.2rem"}}>2</sup></a>
-                        <a href="#" className='flex items-center hover:text-blue-700'><ShoppingCartOutlined /> $14.00</a>
+                        <button onClick={openCart} className='flex items-center hover:text-blue-700'><ShoppingCartOutlined /> $14.00</button>
                     </div>
                 </div>
             </nav>

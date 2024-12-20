@@ -10,12 +10,16 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import ProductPage from './pages/ProductPage';
 import Shop from './pages/Shop';
+import Cart from './components/Cart';
+import Overlay from './components/Overlay';
 
 function App() {
 
   return (
     <>
+      <Overlay />
       <Router>
+        <Cart />
         <Caliborator />
         <Nav />
         <Routes>
