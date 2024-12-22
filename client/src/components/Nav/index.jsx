@@ -15,9 +15,11 @@ import {
     Twitter, 
     Instagram, 
     Menu} from '@mui/icons-material';
+import { useSelector } from 'react-redux';
 
 const Nav = () => {
     const [showFixedNavbar, setShowFixedNavbar] = useState(false);
+    const cart = useSelector((state) => state.cart);
 
     useEffect(() => {
         window.onscroll = function() {showNavbar()};
@@ -32,7 +34,6 @@ const Nav = () => {
     }, []);
 
     const openCart = () => {
-        console.log("Hello")
         const cartSidebar = document.querySelector(".cart");
         const overlay = document.querySelector(".overlay");
 
@@ -78,7 +79,7 @@ const Nav = () => {
                     <div className="flex justify-end gap-3">
                         <a href="#" className='hidden lg:block hover:text-blue-700'><FavoriteBorderOutlined /></a>
                         <a href="#" className='hidden lg:block hover:text-blue-700'><Shuffle /><sup className='bg-blue-600 text-white rounded-full' style={{padding: "0.1rem 0.2rem"}}>2</sup></a>
-                        <button onClick={openCart} className='flex items-center hover:text-blue-700'><ShoppingCartOutlined /> $14.00</button>
+                        <button onClick={openCart} className='flex items-center hover:text-blue-700 border-none outline-none'><ShoppingCartOutlined /><sup className="bg-blue-600 px-1  py-2 rounded-full text-white mr-1">{cart.totalQuantity}</sup> ${cart.totalPrice}</button>
                     </div>
                 </div>
             </nav>
@@ -136,6 +137,15 @@ const TopHeader = () => {
 }
 
 const FixedNavbar = () => {
+    const cart = useSelector((state) => state.cart);
+
+    const openCart = () => {
+        const cartSidebar = document.querySelector(".cart");
+        const overlay = document.querySelector(".overlay");
+
+        cartSidebar.classList.add("open");
+        overlay.classList.add("open");
+    }
     return (
         <>
         <div className="fixed top-0 left-0 w-full py-4 bg-white border-b-2 border-blue-600 z-20">
@@ -162,7 +172,7 @@ const FixedNavbar = () => {
                         <div className="flex gap-3">
                             <a href="#" className='hidden lg:block hover:text-blue-700'><FavoriteBorderOutlined /></a>
                             <a href="#" className='hidden lg:block hover:text-blue-700'><Shuffle /><sup className='bg-blue-600 text-white rounded-full' style={{padding: "0.1rem 0.2rem"}}>2</sup></a>
-                            <a href="#" className='flex items-center hover:text-blue-700'><ShoppingCartOutlined /> $14.00</a>
+                            <button className='flex items-center hover:text-blue-700 outline-none border-none' onClick={openCart}><ShoppingCartOutlined /><sup className="bg-blue-600 px-1  py-2 rounded-full text-white mr-1">{cart.totalQuantity}</sup> ${cart.totalPrice}</button>
                         </div>
                     </div>
                 </div>

@@ -8,6 +8,8 @@ import { KeyboardArrowLeft, KeyboardArrowRight, FavoriteOutlined, Shuffle, Favor
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../../redux/cartSlice';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,6 +62,16 @@ const LimitedProducts = (props) => {
 
 const ProductCard = ({product, index}) => {
     const productRef = useRef(null);
+    const dispatch = useDispatch();
+
+    const addToCart = () => {
+        dispatch(addItem({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            imageUrl: product.imageUrl
+        }));
+    }
 
     useEffect(()=>{
         gsap.to(productRef.current, {
@@ -100,7 +112,7 @@ const ProductCard = ({product, index}) => {
                     </div>
                 </div>
                 <div className="grid grid-cols-2 gap-1">
-                    <button className='w-full col-span-2 sm:col-span-1 bg-transparent hover:bg-blue-600 hover:text-white duration-200 border-[1px] border-blue-600 text-blue-600 text-xs lg:text-md mt-2 py-3'>Add to Cart</button>
+                    <button className='w-full col-span-2 sm:col-span-1 bg-transparent hover:bg-blue-600 hover:text-white duration-200 border-[1px] border-blue-600 text-blue-600 text-xs lg:text-md mt-2 py-3' onClick={addToCart}>Add to Cart</button>
                     <button className='w-full hidden sm:block bg-blue-600 hover:bg-blue-700 text-xs lg:text-md text-white mt-2 py-3'>Buy Now</button>
                 </div>
                 <div className="absolute top-1 right-1 flex flex-col gap-2 opacity-0 group-hover/outer:opacity-100 duration-300">
