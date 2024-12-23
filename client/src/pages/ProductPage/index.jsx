@@ -5,13 +5,12 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import { dummyProducts } from "../../assets/products";
 import { useState, useEffect } from "react";
 import { Add, Facebook, FavoriteBorderOutlined, Pinterest, Remove, Shuffle, Twitter } from "@mui/icons-material";
+import { useDispatch } from "react-redux";
+import { addItem, addItemByQuantity, removeItem } from "../../redux/cartSlice";
 // import ProductRating from "../../components/ProductRating";
 // import RelatedProducts from "../../components/RelatedProducts";
-// import { useDispatch } from "react-redux";
-// import { addToCart } from "../../reducers/cartSlice";
 
 const ProductPage = () => {
-    // const dispatch = useDispatch();
     const { productId } = useParams();
 
     const [loading, setLoading] = useState(false);
@@ -25,16 +24,6 @@ const ProductPage = () => {
             discountedPrice = product.price - ((product.discount.value * product.price) / 100);
         }
     }
-
-    // const handleAddToCart = () => {
-    //     dispatch(addToCart({
-    //         id: product.id,
-    //         name: product.name,
-    //         image: product.image,
-    //         price: discountedPrice,
-    //         quantity: 1
-    //     }));
-    // }
 
     useEffect(() => {
         if(!loading){
@@ -209,13 +198,28 @@ const DescriptionTab = () => {
 
 const AddToCartBtn = ({ product }) => {
     const [quantity, setQuantity] = useState(1);
+    const dispatch = useDispatch();
 
-    const changeQuantity = (type) => {
-        if(type === 'increase'){
-            setQuantity(prev => Math.min(prev + 1, product.quantity));
-        }else if(type === 'decrease'){
-            setQuantity(prev => Math.max(prev - 1, 1));
+    const changeQuantity = (action) => {
+        if(action === 'increase'){
+            setQuantity(prev => prev + 1);
+        }else{
+            if(quantity > 1){
+                setQuantity(prev => prev - 1);
+            }
         }
+    }
+
+    const addToCart = () => {
+        dispatch(addItemByQuantity({
+            newItem: {
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                imageUrl: product.imageUrl
+            },
+            quantity: quantity
+        }));
     }
     return (
         <div className="grid grid-cols-2 my-10">
@@ -224,7 +228,7 @@ const AddToCartBtn = ({ product }) => {
                 <span className="px-5">{quantity}</span>
                 <span className="bg-blue-700 text-white p-1 select-none active:scale-105 cursor-pointer" onClick={() => changeQuantity('increase')}><Add /></span>
             </div>
-            <button className="add-to-cart-btn bg-blue-700 hover:bg-blue-800 duration-300 overflow-hidden text-white relative border-[1px] border-blue-700 py-3">Add to Cart</button>
+            <button className="add-to-cart-btn bg-blue-700 hover:bg-blue-800 duration-300 overflow-hidden text-white relative border-[1px] border-blue-700 py-3" onClick={addToCart}>Add to Cart</button>
         </div>
     );
 }

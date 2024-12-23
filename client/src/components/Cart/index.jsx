@@ -23,7 +23,7 @@ const Cart = () => {
                 <h2 className="font-bold ml-3">Cart</h2>
                 <p className="cursor-pointer hover:text-red-600 flex items-center" onClick={closeCart}><Close fontSize="small" style={{marginTop: "-4px"}} /> Close</p>
             </div>
-            <div style={{height: "calc(100% - 66px)"}} className="overflow-auto">
+            <div style={{height: "calc(100% - 116px - 66px)"}} className="overflow-auto">
                 {
                     cart.items && cart.items.length > 0 ? (
                         cart.items.map(item => {
@@ -36,7 +36,7 @@ const Cart = () => {
                     </div> 
                 }
             </div>
-            <div className="absolute bottom-0 left-0 bg-white w-full p-5 border-t-[1px] border-blue-700">
+            <div className="absolute bottom-0 left-0 bg-white w-full p-5 border-t-2 border-blue-700">
                 <h2>Total: <p className="text-blue-600 inline-block">${cart.totalPrice}</p></h2>
                 <div className="grid grid-cols-2 gap-1">
                     <button className='w-full col-span-2 sm:col-span-1 bg-transparent hover:bg-blue-600 hover:text-white duration-200 border-[1px] border-blue-600 text-blue-600 text-xs lg:text-md mt-2 py-3'>View Cart</button>
