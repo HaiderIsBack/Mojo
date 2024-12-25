@@ -51,7 +51,7 @@ const Nav = () => {
     return (
         <>
             <TopHeader />
-            <nav className='py-12 px-7 grid grid-cols-4 gap-2 items-center'>
+            <nav className='py-9 px-7 grid grid-cols-4 gap-2 items-center'>
                 <div className="block lg:hidden">
                     <Menu />
                 </div>
@@ -75,7 +75,7 @@ const Nav = () => {
                     </div>
                 </div>
                 <div className="flex justify-end gap-2 pl-5">
-                    <a href="#" className='hidden lg:block hover:text-blue-700'>Login / Register</a>
+                    <a href="#" className='hidden lg:block hover:text-blue-700'>Login</a>
                     <div className="flex justify-end gap-3">
                         <a href="#" className='hidden lg:block hover:text-blue-700'><FavoriteBorderOutlined /></a>
                         <a href="#" className='hidden lg:block hover:text-blue-700'><Shuffle /><sup className='bg-blue-600 text-white rounded-full' style={{padding: "0.1rem 0.2rem"}}>2</sup></a>
@@ -160,8 +160,8 @@ const FixedNavbar = () => {
                 </div>
                 <div className="hidden lg:block col-span-6">
                     <nav className='flex gap-5 py-3 px-3  justify-center'>
-                        <a href="#" className='hover:text-blue-700'>Home</a>
-                        <a href="#" className='hover:text-blue-700'>Shop</a>
+                        <Link to="/" className='hover:text-blue-700'>Home</Link>
+                        <Link to="/shop" className='hover:text-blue-700'>Shop</Link>
                         <a href="#" className='hover:text-blue-700'>Contact Us</a>
                         <a href="#" className='hover:text-blue-700'>Blogs</a>
                     </nav>

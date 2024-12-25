@@ -176,4 +176,28 @@ export const dummyProducts = [
         imageUrl: assetUrl + "/headphones.webp",
         category: "Mobiles & Accessories"
     },
+    {
+        id: 21,
+        name: "Nintendo Switch GVK09",
+        price: 300,
+        quantity: 20,
+        imageUrl: assetUrl + "/nintendo-switch.webp",
+        category: "Console"
+    },
+    {
+        id: 22,
+        name: "Headphones",
+        price: 599,
+        quantity: 20,
+        imageUrl: assetUrl + "/headphones.webp",
+        category: "Mobiles & Accessories"
+    },
+    {
+        id: 23,
+        name: "Headphones",
+        price: 599,
+        quantity: 20,
+        imageUrl: assetUrl + "/headphones.webp",
+        category: "Mobiles & Accessories"
+    },
 ]

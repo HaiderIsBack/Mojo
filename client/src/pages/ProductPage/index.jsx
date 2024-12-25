@@ -74,12 +74,12 @@ const ProductPage = () => {
         <>
         <div className="flex flex-col my-16">
             <div className="grid grid-cols-12">
-                <div className="col-span-12 md:col-span-6 flex justify-center">
+                <div className="col-span-12 md:col-span-6 flex justify-center px-3">
                     {
                         loading ?
                         <Skeleton className="max-h-[400px] min-w-[400px] object-contain flex justify-center items-center w-full px-52 h-full overflow-hidden border-[1px] border-gray-200" /> :
-                        (<div className="max-h-[400px] min-w-[400px] object-contain flex justify-center items-center p-10 special-img-box cursor-zoom-in overflow-hidden border-[1px] border-gray-200">
-                            <img src={product.imageUrl} alt={product.name} className={new Image(product.imageUrl).width > new Image(product.imageUrl).height ? "w-full" : "h-full"} />
+                        (<div className="max-h-[400px] w-[400px] flex justify-center items-center p-10 special-img-box cursor-zoom-in overflow-hidden border-[1px] border-gray-200">
+                            <img src={product.imageUrl} alt={product.name} className={"w-full object-contain"} />
                         </div>)
                     }
                 </div>
@@ -222,13 +222,13 @@ const AddToCartBtn = ({ product }) => {
         }));
     }
     return (
-        <div className="grid grid-cols-2 my-10">
+        <div className="flex gap-5 my-10">
             <div className="flex justify-start items-center">
                 <span className="bg-blue-700 text-white p-1 select-none active:scale-105 cursor-pointer" onClick={() => changeQuantity('decrease')}><Remove /></span>
                 <span className="px-5">{quantity}</span>
                 <span className="bg-blue-700 text-white p-1 select-none active:scale-105 cursor-pointer" onClick={() => changeQuantity('increase')}><Add /></span>
             </div>
-            <button className="add-to-cart-btn bg-blue-700 hover:bg-blue-800 duration-300 overflow-hidden text-white relative border-[1px] border-blue-700 py-3" onClick={addToCart}>Add to Cart</button>
+            <button className="add-to-cart-btn bg-blue-700 hover:bg-blue-800 duration-300 overflow-hidden text-white relative border-[1px] border-blue-700 py-3 px-[100px]" onClick={addToCart}>Add to Cart</button>
         </div>
     );
 }

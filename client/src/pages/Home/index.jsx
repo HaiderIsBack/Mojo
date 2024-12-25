@@ -20,6 +20,7 @@ import HotDeals from '../../components/HotDeals';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -128,8 +129,8 @@ const Home = () => {
             </div>
             <div className="col-span-12 lg:col-span-6">
                 <nav className='hidden lg:flex gap-5 py-3 px-3 border-y-[1px] border-gray-300'>
-                    <a href="#" className='hover:text-blue-700'>Home</a>
-                    <a href="#" className='hover:text-blue-700'>Shop</a>
+                    <Link to="/" className='hover:text-blue-700'>Home</Link>
+                    <Link to="/shop" className='hover:text-blue-700'>Shop</Link>
                     <a href="#" className='hover:text-blue-700'>Contact Us</a>
                     <a href="#" className='hover:text-blue-700'>Blogs</a>
                 </nav>
@@ -205,7 +206,7 @@ const Home = () => {
         </div>
 
         <div className="hero-container px-7 my-24">
-            <LimitedProducts productColumns={4} />
+            <LimitedProducts reqProductColumns={4} />
         </div>
 
         <div className="container mx-auto my-52">
@@ -290,7 +291,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="col-span-12 lg:col-span-9 px-7 lg:px-0">
-                    <LimitedProducts productColumns={3} maxProducts={6} />
+                    <LimitedProducts reqProductColumns={3} reqMaxProducts={6} />
                 </div>
             </div>
         </div>
