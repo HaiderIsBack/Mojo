@@ -79,7 +79,7 @@ const Nav = () => {
                     <div className="flex justify-end gap-3">
                         <a href="#" className='hidden lg:block hover:text-blue-700'><FavoriteBorderOutlined /></a>
                         <a href="#" className='hidden lg:block hover:text-blue-700'><Shuffle /><sup className='bg-blue-600 text-white rounded-full' style={{padding: "0.1rem 0.2rem"}}>2</sup></a>
-                        <button onClick={openCart} className='flex items-center hover:text-blue-700 border-none outline-none'><ShoppingCartOutlined /><sup className="bg-blue-600 px-1  py-2 rounded-full text-white mr-1">{cart.totalQuantity}</sup> ${cart.totalPrice}</button>
+                        <button onClick={openCart} className='flex items-center hover:text-blue-700 border-none outline-none'><ShoppingCartOutlined /><sup className="bg-blue-600 px-1  py-2 rounded-full text-white mr-1">{cart.totalQuantity}</sup> Rs.{cart.totalPrice}</button>
                     </div>
                 </div>
             </nav>

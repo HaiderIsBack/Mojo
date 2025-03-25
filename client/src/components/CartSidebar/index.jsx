@@ -1,10 +1,10 @@
-// import { Close } from "@mui/icons-material";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { Add, Close, Remove, X } from "@mui/icons-material";
-import { addItem, removeItem, clearCart } from "../../redux/cartSlice";
+import { Add, Close, Remove } from "@mui/icons-material";
+import { addItem, removeItem } from "../../redux/cartSlice";
 
-const Cart = () => {
+const CartSidebar = () => {
     const [products, setProducts] = useState([]);
     const cart = useSelector((state) => state.cart);
 
@@ -39,7 +39,7 @@ const Cart = () => {
             <div className="absolute bottom-0 left-0 bg-white w-full p-5 border-t-2 border-blue-700">
                 <h2>Total: <p className="text-blue-600 inline-block">${cart.totalPrice}</p></h2>
                 <div className="grid grid-cols-2 gap-1">
-                    <button className='w-full col-span-2 sm:col-span-1 bg-transparent hover:bg-blue-600 hover:text-white duration-200 border-[1px] border-blue-600 text-blue-600 text-xs lg:text-md mt-2 py-3'>View Cart</button>
+                    <Link className='w-full col-span-2 sm:col-span-1 bg-transparent text-center hover:bg-blue-600 hover:text-white duration-200 border-[1px] border-blue-600 text-blue-600 text-xs lg:text-md mt-2 py-3' to={"/cart"} >View Cart</Link>
                     <button className='w-full hidden sm:block bg-blue-600 hover:bg-blue-700 text-xs lg:text-md text-white mt-2 py-3'>Proceed to Checkout</button>
                 </div>
             </div>
@@ -77,4 +77,4 @@ const CartItem = ({ item }) => {
     );
 }
 
-export default Cart;
+export default CartSidebar;
